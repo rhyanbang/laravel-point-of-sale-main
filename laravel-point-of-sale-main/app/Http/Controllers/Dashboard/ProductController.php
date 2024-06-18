@@ -56,6 +56,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        // return dd($request);
+
         $product_code = IdGenerator::generate([
             'table' => 'products',
             'field' => 'product_code',
@@ -76,7 +78,9 @@ class ProductController extends Controller
             'selling_price' => 'required|integer',
         ];
 
+        
         $validatedData = $request->validate($rules);
+        // return dd($validatedData);
 
         // save product code value
         $validatedData['product_code'] = $product_code;
@@ -92,7 +96,19 @@ class ProductController extends Controller
             $validatedData['product_image'] = $fileName;
         }
 
-        Product::create($validatedData);
+        Product::create([
+            'product_code' => $validatedData['product_code'],
+            'product_name' => $validatedData['product_name'],
+            'category_id' => $validatedData['category_id'],
+            'supplier_id' => $validatedData['supplier_id'],
+            'product_garage' => $validatedData['product_garage'],
+            'product_store' => $validatedData['product_store'],
+            'buying_date' => $validatedData['buying_date'],
+            'expire_date' => $validatedData['expire_date'],
+            'buying_price' => $validatedData['buying_price'],
+            'selling_price' => $validatedData['selling_price'],
+            'product_image' => ($request->has('product_image')) ? $validatedData['product_image'] : null,
+        ]);
 
         return Redirect::route('products.index')->with('success', 'Product has been created!');
     }

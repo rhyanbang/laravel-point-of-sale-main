@@ -90,11 +90,11 @@
                                 <label for="bank_name">Bank Name</label>
                                 <select class="form-control @error('bank_name') is-invalid @enderror" name="bank_name">
                                     <option value="">Select Year..</option>
-                                    <option value="BRI">BRI</option>
-                                    <option value="BNI">BNI</option>
-                                    <option value="BCA">BCA</option>
-                                    <option value="BSI">BSI</option>
-                                    <option value="Mandiri">Mandiri</option>
+                                    <option value="PNB">PNB</option>
+                                    <option value="BPI">BPI</option>
+                                    <option value="LANDBANK">LANDBANK</option>
+                                    <option value="BDO">BDO</option>
+                                    <option value="LIFEBANK">LIFEBANK</option>
                                 </select>
                                 @error('bank_name')
                                 <div class="invalid-feedback">

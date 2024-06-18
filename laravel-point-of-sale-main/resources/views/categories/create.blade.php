@@ -18,7 +18,7 @@
                         <div class=" row align-items-center">
                             <div class="form-group col-md-12">
                                 <label for="name">Category Name <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}" required>
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" id="cellphone" name="cellphone" value="{{ old('cellphone') }}" required>
                                 @error('name')
                                 <div class="invalid-feedback">
                                     {{ $message }}
