@@ -2,7 +2,7 @@
 <div class="iq-sidebar sidebar-default ">
     <div class="iq-sidebar-logo d-flex align-items-center justify-content-between">
         <a href="{{ route('dashboard') }}" class="header-logo">
-            <img src="{{ asset('assets/images/logo.png') }}" class="img-fluid rounded-normal light-logo" alt="logo"><h5 class="logo-title light-logo ml-3">POSDash</h5>
+            <img src="{{ asset('assets/images/logo.png') }}" class="img-fluid rounded-normal light-logo" alt="logo"><h5 class="logo-title light-logo ml-3">L&N Gas</h5>
         </a>
         <div class="iq-menu-bt-sidebar ml-0">
             <i class="las la-bars wrapper-menu"></i>
@@ -23,7 +23,7 @@
                 <li class="{{ Request::is('pos*') ? 'active' : '' }}">
                     <a href="{{ route('pos.index') }}" class="svg-icon">
                         <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="ml-3">BARIL-CELIS-SEROMA</span>
+                        <span class="ml-3">BARIL-CELIS-DOLOR</span>
                     </a>
                 </li>
 

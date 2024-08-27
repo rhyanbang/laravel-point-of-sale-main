@@ -25,7 +25,7 @@ class SupplierFactory extends Factory
             'type' => fake()->randomElement(['Distributor', 'Whole Seller']),
             'account_holder' => fake()->name(),
             'account_number' => fake()->randomNumber(8, true),
-            'bank_name' => fake()->randomElement(['BRI', 'BNI', 'BCA', 'BSI', 'MANDIRI', 'BJB']),
+            'bank_name' => fake()->randomElement(['BPI', 'BDO', 'LANDBANK', 'PNB', 'RCBC', 'BJB']),
             'bank_branch' => fake()->city(),
             'city' => fake()->city(),
         ];
